@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIY-79-Y5d" customClass="EllipseView" customModule="Counter" customModuleProvider="target">
+                                <rect key="frame" x="80.666666666666686" y="120" width="253" height="253"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0" placeholder="0" textAlignment="center" minimumFontSize="160" translatesAutoresizingMaskIntoConstraints="NO" id="GoA-zY-p7Y">
+                                        <rect key="frame" x="74.999999999999986" y="30.666666666666657" width="102.00000000000001" height="191"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="160"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="textFieldDidEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8dV-bS-LLk"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GoA-zY-p7Y" firstAttribute="centerX" secondItem="vIY-79-Y5d" secondAttribute="centerX" id="IeN-MN-dcj"/>
+                                    <constraint firstAttribute="height" constant="253" id="s9o-H7-F6b"/>
+                                    <constraint firstItem="GoA-zY-p7Y" firstAttribute="centerY" secondItem="vIY-79-Y5d" secondAttribute="centerY" id="sNb-xE-Q3M"/>
+                                    <constraint firstAttribute="width" constant="253" id="yrn-E3-Gwe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.92646025649948183" green="0.25482086685890332" blue="0.2016864245999517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.93882935209999996" green="0.42187510909999998" blue="0.44885028599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-mp-QHU">
+                                <rect key="frame" x="0.0" y="393" width="414" height="310"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4P-J6-5Y0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="increaseCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vnm-OL-Ll1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-QR-GsP">
+                                        <rect key="frame" x="0.0" y="80" width="414" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="decreaseCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oh9-Tw-fEk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-fW-zgc">
+                                        <rect key="frame" x="0.0" y="160" width="414" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="tintColor" red="0.56182295083999634" green="0.15685829467971724" blue="0.12190346865462556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="reset"/>
+                                        <connections>
+                                            <action selector="resetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evf-1Z-ySE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pt-vw-ugQ">
+                                        <rect key="frame" x="0.0" y="240" width="414" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="tintColor" red="0.74899911664310515" green="0.72980650089640398" blue="0.29819870458339875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="keyboard"/>
+                                        <connections>
+                                            <action selector="resetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVs-2W-prA"/>
+                                            <action selector="showKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDz-8s-Ibc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8E4-mp-QHU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Al-zi-T7y"/>
+                            <constraint firstItem="vIY-79-Y5d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="4EM-Aw-vVE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8E4-mp-QHU" secondAttribute="trailing" id="9eu-Jh-VDh"/>
+                            <constraint firstItem="vIY-79-Y5d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kah-i7-5oA"/>
+                            <constraint firstItem="8E4-mp-QHU" firstAttribute="top" secondItem="vIY-79-Y5d" secondAttribute="bottom" constant="20" id="Us8-8N-5q5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BVF-P6-hVN" appends="YES" id="iDj-d9-mqZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="countTextField" destination="GoA-zY-p7Y" id="ixj-O7-Bxd"/>
+                        <outlet property="ellipseView" destination="vIY-79-Y5d" id="0nb-SG-rfW"/>
+                        <outletCollection property="buttons" destination="n4P-J6-5Y0" collectionClass="NSMutableArray" id="cjL-vZ-Nwx"/>
+                        <outletCollection property="buttons" destination="Bhn-QR-GsP" collectionClass="NSMutableArray" id="pe4-KL-nEz"/>
+                        <outletCollection property="buttons" destination="FAF-fW-zgc" collectionClass="NSMutableArray" id="EH6-cM-E2n"/>
+                        <outletCollection property="buttons" destination="7pt-vw-ugQ" collectionClass="NSMutableArray" id="V30-9x-w5a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BVF-P6-hVN">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="6qD-rG-So5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="43.478260869565219" y="32.608695652173914"/>
+        </scene>
+    </scenes>
+</document>
